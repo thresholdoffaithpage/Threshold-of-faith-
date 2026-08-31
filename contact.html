@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Threshold of Faith</title>
+<meta name="description" content="Get in touch with Threshold of Faith.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Threshold of Faith</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-intro">
+  <h1>Get in touch</h1>
+  <p>Questions, feedback, or a request for prayer — send a message below.</p>
+</div>
+
+<form class="contact-form" id="contact-form">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit" class="btn btn-primary">Send message</button>
+</form>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Threshold of Faith.</p>
+    <nav>
+      <a href="sermons.html">Sermons</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>wireContactForm("contact-form", "you@example.com");</script>
+</body>
+</html>
