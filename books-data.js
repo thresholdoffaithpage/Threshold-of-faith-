@@ -14,15 +14,33 @@
 
 const BOOKS = [
   {
-    title: "Sample Book Title",
+    title: "21 Days Prayers for Financial Success",
     price: "$9.99",
-    blurb: "This is placeholder text — replace it with a real description of your book once it's ready to sell.",
+    blurb: "A 21-day prayer journey to align your faith, mind, and actions with God's principles of financial provision — Scripture, declarations, and practical steps for each day.",
+    buyUrl: "https://thresholdfaith.gumroad.com/l/zsede"
+  },
+  {
+    title: "Navigating Uncertainties",
+    price: "",
+    blurb: "On walking by faith through seasons of doubt and unclear direction — coming soon.",
     buyUrl: ""
   },
   {
-    title: "Another Sample Title",
-    price: "$14.99",
-    blurb: "A second placeholder entry, so you can see how the Books page looks with more than one title listed.",
+    title: "Kiss of Betrayal",
+    price: "",
+    blurb: "A look at enduring and healing from betrayal without losing trust in God — coming soon.",
+    buyUrl: ""
+  },
+  {
+    title: "Breaking Limits and Limitations",
+    price: "",
+    blurb: "On overcoming the personal and spiritual ceilings that keep believers from their full calling — coming soon.",
+    buyUrl: ""
+  },
+  {
+    title: "Tenacity of Birthing the Supernatural",
+    price: "",
+    blurb: "On pressing through in prayer and faith until a promise from God is fully realized — coming soon.",
     buyUrl: ""
   }
 ];
