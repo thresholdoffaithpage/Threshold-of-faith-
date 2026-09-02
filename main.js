@@ -117,6 +117,32 @@ function renderDetail(rootId) {
   `;
 }
 
+// ---- Books page ----
+function bookCardHtml(b) {
+  const buyBtn = b.buyUrl
+    ? `<a class="btn btn-primary" href="${escapeHtml(b.buyUrl)}" target="_blank" rel="noopener">Buy now — ${escapeHtml(b.price)}</a>`
+    : `<span class="btn btn-outline btn-disabled">Coming soon</span>`;
+  return `
+    <div class="book-card">
+      <div class="book-cover" aria-hidden="true">${escapeHtml(b.title.slice(0, 1))}</div>
+      <div class="book-info">
+        <h3>${escapeHtml(b.title)}</h3>
+        <p>${escapeHtml(b.blurb)}</p>
+        ${buyBtn}
+      </div>
+    </div>`;
+}
+
+function renderBooks(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  if (BOOKS.length === 0) {
+    el.innerHTML = `<div class="empty-state">No books listed yet — check back soon.</div>`;
+    return;
+  }
+  el.innerHTML = BOOKS.map(bookCardHtml).join("");
+}
+
 // ---- Contact form: builds a mailto link, no backend needed ----
 function wireContactForm(formId, mailto) {
   const form = document.getElementById(formId);
