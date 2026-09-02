@@ -294,52 +294,6 @@ nav.main-nav a.active {
 .contact-form textarea { min-height: 130px; resize: vertical; }
 .contact-form button { margin-top: 24px; cursor: pointer; }
 
-/* Books page */
-.book-grid {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 12px 24px 60px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 26px;
-}
-.book-card {
-  background: var(--card);
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.book-cover {
-  aspect-ratio: 3 / 4;
-  background: var(--burgundy);
-  color: var(--paper);
-  font-family: var(--font-display);
-  font-size: 42px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.book-info { padding: 18px; }
-.book-info h3 {
-  font-family: var(--font-display);
-  font-size: 19px;
-  font-weight: 500;
-  margin: 0 0 8px;
-}
-.book-info p {
-  font-size: 14px;
-  color: var(--ink-soft);
-  margin: 0 0 16px;
-}
-.btn-disabled {
-  opacity: 0.55;
-  cursor: default;
-  pointer-events: none;
-}
-
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--rule);
