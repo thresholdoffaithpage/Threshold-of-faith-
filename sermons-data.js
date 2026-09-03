@@ -12,7 +12,7 @@
     date      - "Month Day, Year"
     tags      - topics, used for filtering on the Sermons page
     summary   - one or two sentences, shown in listings
-    image     - path to a thumbnail image in the images/ folder (leave "" if none)
+    image     - path to a thumbnail image file (just the filename, e.g. "my-photo.jpg") (leave "" if none)
     videoId   - the part of the YouTube URL after "v=" (leave "" if none yet)
     body      - the full sermon text. Each item in the array is one paragraph.
                 Use "## " at the start of a line to make it a subheading.
@@ -26,7 +26,7 @@ const SERMONS = [
     date: "September 1, 2026",
     tags: ["Old Testament", "Spiritual Growth"],
     summary: "A disguised prophet, a distracted king, and a warning that still applies today: how ordinary busyness can cost us the very things God entrusted to our care.",
-    image: "images/sermon-busy-here-and-there.jpg",
+    image: "sermon-busy-here-and-there.jpg",
     videoId: "",
     body: [
       "There's a quiet danger tucked inside an obscure Old Testament story — and it might be costing you something sacred right now. In 1 Kings 20:35–42, a disguised prophet corners King Ahab with a parable that becomes a mirror for every one of us: the danger of being busy here and there.",
