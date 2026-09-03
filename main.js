@@ -10,14 +10,22 @@ function paragraphsToHtml(body) {
       if (block.startsWith("## ")) {
         return `<h2>${escapeHtml(block.slice(3))}</h2>`;
       }
-      return `<p>${escapeHtml(block)}</p>`;
+      const withBold = escapeHtml(block).replace(
+        /\*\*(.+?)\*\*/g,
+        "<strong>$1</strong>"
+      );
+      return `<p>${withBold}</p>`;
     })
     .join("\n");
 }
 
 function sermonRowHtml(s) {
+  const thumb = s.image
+    ? `<img class="thumb" src="${escapeHtml(s.image)}" alt="${escapeHtml(s.title)}">`
+    : "";
   return `
     <a class="sermon-row" href="sermon.html?slug=${encodeURIComponent(s.slug)}">
+      ${thumb}
       <div class="date">${escapeHtml(s.date)}</div>
       <div class="details">
         <h3>${escapeHtml(s.title)}</h3>
@@ -96,6 +104,10 @@ function renderDetail(rootId) {
 
   document.title = `${sermon.title} — Threshold of Faith`;
 
+  const bannerHtml = sermon.image
+    ? `<img class="sermon-banner" src="${escapeHtml(sermon.image)}" alt="${escapeHtml(sermon.title)}">`
+    : "";
+
   const videoHtml = sermon.videoId
     ? `<div class="video-frame"><div class="ratio">
         <iframe src="https://www.youtube.com/embed/${encodeURIComponent(
@@ -105,6 +117,7 @@ function renderDetail(rootId) {
     : "";
 
   root.innerHTML = `
+    ${bannerHtml}
     <div class="page-intro">
       <div class="sermon-meta">
         <span>${escapeHtml(sermon.date)}</span>
@@ -115,6 +128,32 @@ function renderDetail(rootId) {
     ${videoHtml}
     <div class="prose">${paragraphsToHtml(sermon.body)}</div>
   `;
+}
+
+// ---- Books page ----
+function bookCardHtml(b) {
+  const buyBtn = b.buyUrl
+    ? `<a class="btn btn-primary" href="${escapeHtml(b.buyUrl)}" target="_blank" rel="noopener">Buy now — ${escapeHtml(b.price)}</a>`
+    : `<span class="btn btn-outline btn-disabled">Coming soon</span>`;
+  return `
+    <div class="book-card">
+      <div class="book-cover" aria-hidden="true">${escapeHtml(b.title.slice(0, 1))}</div>
+      <div class="book-info">
+        <h3>${escapeHtml(b.title)}</h3>
+        <p>${escapeHtml(b.blurb)}</p>
+        ${buyBtn}
+      </div>
+    </div>`;
+}
+
+function renderBooks(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  if (BOOKS.length === 0) {
+    el.innerHTML = `<div class="empty-state">No books listed yet — check back soon.</div>`;
+    return;
+  }
+  el.innerHTML = BOOKS.map(bookCardHtml).join("");
 }
 
 // ---- Contact form: builds a mailto link, no backend needed ----

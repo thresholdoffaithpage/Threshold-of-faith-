@@ -73,14 +73,19 @@ nav.main-nav a.active {
 
 /* Hero */
 .hero {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 72px 24px 56px;
+  position: relative;
+  max-width: none;
+  margin: 0;
+  padding: 100px 24px 84px;
+  background: linear-gradient(180deg, rgba(20,12,10,0.72), rgba(20,12,10,0.55)), url('images/hero-open-bible.jpg');
+  background-size: cover;
+  background-position: center 35%;
 }
+.hero .inner { max-width: 860px; margin: 0 auto; }
 .hero .kicker {
   font-family: var(--font-display);
   font-style: italic;
-  color: var(--burgundy);
+  color: var(--gold);
   font-size: 18px;
   margin: 0 0 14px;
 }
@@ -91,10 +96,11 @@ nav.main-nav a.active {
   line-height: 1.12;
   margin: 0 0 20px;
   max-width: 11ch;
+  color: var(--paper);
 }
 .hero p.lede {
   font-size: 18px;
-  color: var(--ink-soft);
+  color: #e9decb;
   max-width: 46ch;
   margin: 0 0 30px;
 }
@@ -125,6 +131,11 @@ nav.main-nav a.active {
   margin-left: 10px;
 }
 .btn-outline:hover { background: var(--paper-deep); }
+.hero .btn-outline {
+  color: var(--paper);
+  border-color: var(--paper);
+}
+.hero .btn-outline:hover { background: rgba(255,255,255,0.12); }
 
 /* Section heading */
 .section-heading {
@@ -166,6 +177,13 @@ nav.main-nav a.active {
   color: inherit;
 }
 .sermon-row:last-child { border-bottom: none; }
+.sermon-row .thumb {
+  width: 84px;
+  height: 108px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
 .sermon-row .date {
   font-family: var(--font-body);
   font-size: 13px;
@@ -234,6 +252,7 @@ nav.main-nav a.active {
 
 .prose { max-width: 760px; margin: 0 auto; padding: 0 24px 60px; }
 .prose p { font-size: 17px; color: var(--ink); margin: 0 0 18px; }
+.prose p strong { color: var(--burgundy-deep); font-weight: 600; }
 .prose h2 {
   font-family: var(--font-display);
   font-size: 24px;
@@ -243,6 +262,13 @@ nav.main-nav a.active {
 
 /* Sermon detail */
 .sermon-detail .page-intro { padding-bottom: 8px; }
+.sermon-banner {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
 .sermon-meta {
   display: flex;
   gap: 18px;
@@ -293,6 +319,52 @@ nav.main-nav a.active {
 }
 .contact-form textarea { min-height: 130px; resize: vertical; }
 .contact-form button { margin-top: 24px; cursor: pointer; }
+
+/* Books page */
+.book-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 12px 24px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 26px;
+}
+.book-card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.book-cover {
+  aspect-ratio: 3 / 4;
+  background: var(--burgundy);
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book-info { padding: 18px; }
+.book-info h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.book-info p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+.btn-disabled {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+}
 
 /* Footer */
 .site-footer {
