@@ -339,6 +339,11 @@ nav.main-nav a.active {
 }
 .book-cover {
   aspect-ratio: 3 / 4;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.book-cover-placeholder {
   background: var(--burgundy);
   color: var(--paper);
   font-family: var(--font-display);
