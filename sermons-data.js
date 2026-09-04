@@ -21,6 +21,41 @@
 
 const SERMONS = [
   {
+    slug: "who-touched-me",
+    title: "Who Touched Me? The Touch That Changes Everything (Mark 5)",
+    scripture: "Mark 5:25-34",
+    date: "September 4, 2026",
+    tags: ["Gospels", "Faith"],
+    summary: "In a crowd pressing in on every side, one woman's desperate touch draws power from Jesus. A message on the difference between merely being near God and truly reaching for Him.",
+    image: "sermon-who-touched-me-thumb.jpg",
+    banner: "sermon-who-touched-me-banner.jpg",
+    videoId: "",
+    body: [
+      "Let us press through the crowd on a dusty Galilean road, where a multitude surrounds Jesus. People jostle, push, and press against Him from every side — a sea of need, curiosity, and demand. Yet in this chaotic throng, something extraordinary happens.",
+      "A woman who had bled for twelve years — physically exhausted, ritually unclean, socially isolated, and financially ruined — reaches through the crowd. Her faith crystallizes into a single, desperate act: \"If I may touch but His clothes, I shall be whole.\" She touches the fringe of His garment.",
+      "Two things happen simultaneously: immediately, the fountain of her blood is dried up. And Jesus stops, turns, and asks, \"Who touched My clothes?\"",
+      "The disciples are bewildered. The crowd is pressing in, yet Jesus knows something different has occurred — power has gone out of Him.",
+      "## The Press of the Crowd vs. the Touch of Faith",
+      "There is a profound difference between pressing and touching. The multitude pressed. They were close in proximity, involved in the movement, surrounded by the moment. Yet their nearness was external. Many are in the press — present in body, active in religion, surrounded by worship — yet their contact with God remains shallow. They are in the crowd, but not in touch with Him.",
+      "The woman touched. Her touch was intentional, faith-filled, and desperate. It rose above her condition, defied her shame, and drew divine power.",
+      "This is the question echoing through every gathering and every quiet moment: \"Who touched Me?\" Not who attended. Not who sang. But who made contact with God's heart?",
+      "## The Anatomy of a Faith That Touches Heaven",
+      "**It comes from desperate recognition.** She knew her condition was beyond human help. Having exhausted every option, she reached for Christ alone. True worship begins when every other dependence is abandoned.",
+      "**It is specific and intentional.** She reached for the hem of His garment — the tassel symbolizing God's authority and covenant. Her faith was informed and focused. Faith touches heaven when it aligns with revealed truth.",
+      "**It draws divine power.** The power that flowed from Jesus was dunamis — miraculous strength. Heaven responds when faith reaches out. God allows Himself to be touched by believing hearts.",
+      "**It cannot go unnoticed.** In a crowd of many, one touch stood out. Heaven is never overwhelmed by numbers. One sincere prayer is always felt.",
+      "## \"Daughter, Your Faith Has Made You Well\"",
+      "When the woman came forward trembling, Jesus spoke words that changed everything. **Identity restored** — she is called \"Daughter.\" **Wholeness declared** — she is made whole: saved, healed, restored. **Peace released** — she leaves not only healed, but whole in spirit.",
+      "True encounters with God transform identity, heal brokenness, and release peace.",
+      "## The Hem Is Still Within Reach",
+      "You may feel weary, hidden, or drained. Yet the hem of His garment is still reachable. Christ is not limited by space. His compassion, power, and faithfulness are accessible to all who reach for Him in spirit and truth. The same virtue still flows.",
+      "## Come Forward from the Crowd",
+      "Jesus is still asking, \"Who touched Me?\" He listens for faith-filled prayer. He responds to worship born of need, not ritual.",
+      "Do not merely press with the crowd. Reach. Touch. Believe. For no one truly touches the heart of God and remains the same.",
+      "The multitude presses. Faith touches. Be the one who touches Him today."
+    ]
+  },
+  {
     slug: "it-was-borrowed",
     title: "It Was Borrowed: A Lesson in Stewardship and Restoration",
     scripture: "2 Kings 6:1-7",
