@@ -13,12 +13,46 @@
     tags      - topics, used for filtering on the Sermons page
     summary   - one or two sentences, shown in listings
     image     - path to a thumbnail image file (just the filename, e.g. "my-photo.jpg") (leave "" if none)
+    banner    - optional wider image for the sermon's own page (leave "" to reuse "image")
     videoId   - the part of the YouTube URL after "v=" (leave "" if none yet)
     body      - the full sermon text. Each item in the array is one paragraph.
                 Use "## " at the start of a line to make it a subheading.
 */
 
 const SERMONS = [
+  {
+    slug: "it-was-borrowed",
+    title: "It Was Borrowed: A Lesson in Stewardship and Restoration",
+    scripture: "2 Kings 6:1-7",
+    date: "September 4, 2026",
+    tags: ["Old Testament", "Stewardship"],
+    summary: "A prophet's axe head sinks into the Jordan, and Elisha makes iron float. A story about accountability for what we've been given — and the grace that restores what we thought was lost.",
+    image: "sermon-borrowed-axe-thumb.jpg",
+    banner: "sermon-borrowed-axe-banner.jpg",
+    videoId: "",
+    body: [
+      "Let us journey to the banks of the Jordan River, where a school of prophets is engaged in sacred labor — building a meeting place, cutting down trees. The air rings with the sound of iron on wood, a symphony of communal purpose.",
+      "Then, a sudden, sickening sound — not of cutting, but of slipping. An axe head flies from its handle, arcs through the air, and disappears with a plunk into the murky, flowing waters of the Jordan.",
+      "The prophet's cry echoes through the ages: \"Alas, my master! It was borrowed!\"",
+      "This is more than a story about a lost tool. It is a divine parable on the nature of our very existence.",
+      "## The Cry of Accountability: \"It Was Borrowed!\"",
+      "The prophet's distress was not merely about the loss, but about stewardship. He did not say, \"My axe is gone.\" He said, \"It was borrowed.\" This is the foundational truth of an uplifted life: everything we have and are is on loan.",
+      "**Our life is borrowed.** Every breath is a gift sustained by God. **Our gifts are borrowed.** Talents and abilities are entrusted to us for service. **Our time is borrowed.** Our days are numbered and meant to be lived wisely.",
+      "The humility in that cry — \"Alas, my master!\" — reveals accountability to a higher authority. To live recklessly, as though what we hold belongs to us absolutely, is to risk spiritual shipwreck.",
+      "## The Iron That Sank: When Strength Fails",
+      "The axe head was iron — symbolic of strength, effectiveness, and cutting edge. Its sinking reveals what happens when human strength fails in the middle of labor, when spiritual sharpness grows dull and disconnects from faith, and when life's burdens swallow purpose and clarity.",
+      "Many have felt this moment — watching effectiveness sink into depths beyond reach, realizing personal effort cannot retrieve what was lost.",
+      "## The Miracle at the River: God Restores the Unretrievable",
+      "The story shifts from accountability to grace. The prophet does not dive in helpless striving. He goes to his master. Elisha does not rebuke him; he asks a restoring question: \"Where did it fall?\"",
+      "He goes to the precise place of failure. Then he throws a stick into the water — and the impossible happens. The iron floats.",
+      "This act reveals divine restoration. **Grace defies nature** — what should sink rises. **What is lost is recovered** — purpose, passion, purity can be restored. **Restoration must be received** — God restores, but the prophet must reach out and take it.",
+      "## Living Uplifted: Stewards of the Miraculous",
+      "How then should we live?",
+      "**Live with a borrowed mindset.** Life, gifts, relationships, and resources are sacred trusts. Accountability sharpens purpose. **Cry out at the point of failure.** Do not hide loss. God meets us exactly where it occurred. **Trust God's restorative power.** What you cannot retrieve, God can resurrect. **Take back your restored edge.** When God restores, return to the work with humility and gratitude.",
+      "You are not wielding what you own. You are holding a borrowed, grace-restored instrument in the hands of a God who makes iron float.",
+      "Live with holy accountability. Walk in boundless hope. Your Master is near. Your restoration is possible. And your labor is never in vain."
+    ]
+  },
   {
     slug: "busy-here-and-there",
     title: "Busy Here and There: The Hidden Cost of Distraction (1 Kings 20)",

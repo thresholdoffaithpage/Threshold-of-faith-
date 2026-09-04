@@ -104,8 +104,9 @@ function renderDetail(rootId) {
 
   document.title = `${sermon.title} — Threshold of Faith`;
 
-  const bannerHtml = sermon.image
-    ? `<img class="sermon-banner" src="${escapeHtml(sermon.image)}" alt="${escapeHtml(sermon.title)}">`
+  const bannerSrc = sermon.banner || sermon.image;
+  const bannerHtml = bannerSrc
+    ? `<img class="sermon-banner" src="${escapeHtml(bannerSrc)}" alt="${escapeHtml(sermon.title)}">`
     : "";
 
   const videoHtml = sermon.videoId
@@ -135,9 +136,12 @@ function bookCardHtml(b) {
   const buyBtn = b.buyUrl
     ? `<a class="btn btn-primary" href="${escapeHtml(b.buyUrl)}" target="_blank" rel="noopener">Buy now — ${escapeHtml(b.price)}</a>`
     : `<span class="btn btn-outline btn-disabled">Coming soon</span>`;
+  const cover = b.cover
+    ? `<img class="book-cover" src="${escapeHtml(b.cover)}" alt="${escapeHtml(b.title)}">`
+    : `<div class="book-cover book-cover-placeholder" aria-hidden="true">${escapeHtml(b.title.slice(0, 1))}</div>`;
   return `
     <div class="book-card">
-      <div class="book-cover" aria-hidden="true">${escapeHtml(b.title.slice(0, 1))}</div>
+      ${cover}
       <div class="book-info">
         <h3>${escapeHtml(b.title)}</h3>
         <p>${escapeHtml(b.blurb)}</p>
